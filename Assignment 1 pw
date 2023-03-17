@@ -1,0 +1,103 @@
+# Q2
+# for Loop
+nos = int(input("enter a number: "))
+A = [x for x in range(1, nos + 1)]
+N = []
+for i in A:
+    if (i * i * i) % 4 == 0 or (i * i * i) % 5 == 0:
+        N.append(i)
+    else:
+        continue
+print(N)
+
+# While Loop
+num = 1
+M = []
+while num <= nos:
+    if (num * num * num) % 4 == 0 or (num * num * num) % 5 == 0:
+        M.append(num)
+    # else:
+    #     continue
+    num = num + 1
+print(M)
+
+# ----------------------------------------------------------------------------------------
+# Q3
+unit = int(input('enter the no. of unit: '))
+pay = 0
+if unit <= 100:
+    for i in range(1, unit + 1):
+        pay += 4.5
+elif unit <= 200:
+    for i in range(1, 100+1):
+        pay += 4.5
+    for j in range(101, unit+1):
+        pay += 6
+elif unit <= 300:
+    for i in range(1, 101):
+        pay += 4.5
+    for j in range(101, 201):
+        pay += 6
+    for k in range(201, unit + 1):
+        pay += 10
+
+elif unit > 300:
+    for i in range(1, 101):
+        pay += 4.5
+    for j in range(101, 201):
+        pay += 6
+    for k in range(201, 301):
+        pay += 10
+    for l in range(301, unit + 1):
+        pay += 20
+
+print(pay)
+
+# for i in range(1, 100):
+#     pay += 4.5
+# for j in range(101, unit+1):
+#     pay += 6
+# for k in range(201, unit+1):
+#     pay += 10
+# for l in range(301, unit+1):
+#     pay += 20
+
+
+# ----------------------------------------------------------------------------------------
+# Q4
+# for Loop
+num = int(input('enter a number'))
+sum = 0
+product = 1
+for i in range (1, num + 1):
+    sum += i
+    product *= i
+
+print('sum: ', sum , 'product:', product)
+
+# While Loop
+sum = 0
+product = 0
+count = 1
+while count <= num:
+    sum += count
+    product += count
+    count += 1
+
+print(f"sum is {sum} and product is {product} ")
+
+# ----------------------------------------------------------------------------------------
+# Q5
+vowels = ['a', 'e', 'i', 'o', 'u']
+novol = 0
+string = "I want to become a data scientist"
+for i in vowels:
+    for j in string:
+        if i == j :
+            novol += 1
+        else:
+            continue
+print('count of vowels:', novol)
+
+# ----------------------------------------------------------------------------------------
+
